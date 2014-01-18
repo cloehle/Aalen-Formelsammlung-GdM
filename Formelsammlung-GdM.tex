@@ -1,0 +1,193 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{transparent}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\begin{document}
+Formelsammlung - Grundlagen der Mathematik - Stand: 17.01.2014 - Christian L{\"o}hle\\
+\footnotesize Dieses Werk ist unter der Creative-Commons-Lizenz vom Typ Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International lizenziert. Um eine Kopie dieser Lizenz einzusehen, besuchen Sie http://creativecommons.org/licenses/by-sa/4.0/ oder schreiben Sie einen Brief an Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.\\\normalsize
+
+Logik \\ \\
+%https://de.wikipedia.org/wiki/Formelsammlung_Logik
+%https://de.wikipedia.org/wiki/Aussagenlogik
+\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
+&& Negation & Konjunktion & Disjunktion & Exklusives Oder & Implikation & {\"A}quivalenz\\ \hline
+&& Nicht A & A und B & A oder B & Entweder A oder B & wenn A dann B & A genau dann wenn B\\ \hline
+A & B & $\neg A$  &  $A \land B$ & $A \lor B$ &  $A \oplus B$ & $A \Rightarrow B$ & $A \Leftrightarrow B$ \\ \hline
+$0$ & $0$ & $1$ & $0$ & $0$ & $0$ & $1$ & $1$ \\ \hline
+$0$ & $1$ & $1$ & $0$ & $1$ & $1$ & $1$ & $0$ \\ \hline
+$1$ & $0$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ \\ \hline
+$1$ & $1$ & $0$ & $1$ & $1$ & $0$ & $1$ & $1$ \\ \hline
+\end{tabular}\\ \\
+Eine Formel F hei{\ss}t:
+\begin{itemize}\itemsep0em\small
+\item {\bfseries erf{\"u}llbar}, wenn F bei mindestens einer Variabelbelegung 1 ist.\\
+\item {\bfseries unerf{\"u}llbar}, wenn F bei jeder Variabelbelegung 0 ist.\\
+\item {\bfseries Tautologie($\top$)/g{\"u}ltig}, wenn F bei jeder Variabelbelegung 1 ist.
+\end{itemize}\normalsize
+
+Rechengesetze:\\
+Kommutativgesetze:\\ $x \land y = y \land x$ \\ $x \lor y = y \lor y$ \\
+Assoziativgesetze: \\ $x \land ( y \land z ) = ( x \land y ) \land z $ \\ $( x \lor y ) \lor z = x \lor( y \lor z )$ \\
+Distributivgesetze: \\ $x \land ( y \lor z ) = ( x \land y ) \lor ( x \land z )$ \\  	$x \lor ( y \land z ) = ( x \lor y ) \land ( x \lor z )$ \\
+Absorptionsgesetze: \\ $x \land ( x \lor y ) = x$ \\ $x \lor ( x \land y ) = x$\\
+De Morgansche Gesetze: \\ $\neg ( x \land y ) = \neg x \lor \neg y$ \\
+Sonstiges: \\ $x \oplus 0 = x$\\ $x \oplus 1 = \neg x$ \\ $ x \oplus y = (x \lor y) \land \neg ( x \land y ) = ( x \land \neg y ) \lor ( \neg x \land y )$ \\ $ x \Rightarrow y = \neg x \lor y $ \\
+%https://de.wikipedia.org/wiki/Disjunktive_Normalform
+%https://de.wikipedia.org/wiki/Konjunktive_Normalform
+Normalformen:\\
+{\bfseries Disjunktive Normalform(DNF)} besteht aus einer Disjunktion($\lor$) von Konjunktionstermen($\land$). Nehme die Variabelbelegung(z.B. $A \land \neg B \land \neg C$) wo F=1 ist und verkn{\"u}pfe sie mit $\lor$. \\
+{\bfseries Konjunktive Normalform(KNF}) besteht aus einer Konjunktion($\land$) von Disjunktionstermen($\lor$). Nehme die Variabelbelegung(z.B. $A \land \neg B \land \neg C$) wo F=0 ist, {\bfseries negiere} sie($\neg A \land B \land C$) und verkn{\"u}pfe sie mit $\lor$. \\
+Normalformen sind m{\"o}glich, da $\land$, $\neg$ und $\lor$, $\neg$ eine vollst{\"a}ndige Basis f{\"u}r die Aussagenlogik bilden. Um zu zeigen, dass andere Operatoren ebenfalls eine vollst{\"a}ndige Basis bilden, muss man $\land$, $\neg$ oder $\lor$, $\neg$ als Formel bilden. \\
+%https://de.wikipedia.org/w/index.php?title=Datei:Knf%2Bdnf.svg&filetimestamp=20110122170208&
+\begin{figure}[H]
+  \centering
+  \def\svgwidth{400pt}
+  \input{knfdnf.pdf_tex} %lizenz: CC-by-sa 2.0/de Urheber:  	WikiBasti 21:12, 21. Jan. 2011 (CET) und JensKohl
+	\end{figure}\scriptsize  Lizenz: CC-by-sa 2.0{/}de Urheber: WikiBasti\normalsize \\
+
+
+Mengen \\
+%https://de.wikipedia.org/wiki/Menge_%28Mathematik%29
+%https://de.wikipedia.org/wiki/M%C3%A4chtigkeit_%28Mathematik%29
+%https://de.wikipedia.org/wiki/Potenzmenge
+{[}n{]} := \{1, 2, 3, ..., n\} \\
+A = \{1, 3, 7, 21\} $\Rightarrow$ $\mathopen|A\mathclose|$ = 4 \\
+Die {\bfseries Potenzmenge} $\mathcal P(A)$ ist eine neue Menge, die aus allen Teilmengen von A besteht. \\
+$\mathcal P(\emptyset) = \{ \emptyset \}$ \\
+$\mathcal P(\{ a \}) = \bigl\{ \emptyset, \{ a \} \bigr\}$ \\
+$\mathcal P(\{ a, b \}) = \bigl\{ \emptyset, \{ a \}, \{ b \}, \{ a, b \} \bigr\}$ \\
+$\mathcal P(\{ a, b, c \}) = \bigl\{ \emptyset, \{ a \}, \{ b \}, \{ c \}, \{ a, b \}, \{ a, c \}, \{ b, c \}, \{ a, b, c \} \bigr\}$ \\
+$\mathcal P(\mathcal P(\emptyset)) = \bigl\{ \emptyset, \{\emptyset\}\bigr\}$ \\
+$\mathopen|\mathcal P(A)\mathclose| = 2^{\mathopen|A\mathclose|}$ \\
+
+Operationen auf Mengen:
+\begin{itemize}\itemsep0em\small
+\item Schnitt: $A \cap B := \{ x \mid \left( x \in A \right) \land \left( x \in B \right) \}$
+\item Vereinigung: $A \cup B := \{ x \mid \left( x \in {A} \right) \lor \left( x \in B \right) \}$
+\item Differenz: $A \setminus B := \{ x \mid \left( x\in A \right) \land \left( x\not \in B \right) \}$
+\item Symmetrische Differenz: $A \, \triangle \, B := \left( A \setminus B \right) \cup \left( B \setminus A \right) = ( A \cup B) \setminus (A \cap B) $
+\end{itemize}  \normalsize
+Rechengesetze:\itemsep0em\small
+\begin{itemize}
+\item Reflexivit{\"a}t: $A\subseteq A$
+\item Antisymmetrie: $Aus A\subseteq B und B\subseteq A folgt A = B$
+\item Transitivit{\"a}t: Aus $A\subseteq B$ und $B\subseteq C$ folgt $A\subseteq C$
+
+Die Mengen-Operationen Schnitt $\cap$ und Vereinigung $\cup$ sind kommutativ, assoziativ und zueinander distributiv:
+\item Assoziativgesetz: $\left( A \cup B \right) \cup C = A \cup \left( B \cup C \right)$ und $\left( A \cap B \right) \cap C = A \cap \left( B \cap C \right)$
+\item Kommutativgesetz: $A \cup B = B \cup A$ und $A \cap B = B \cap A$
+\item Distributivgesetz: $A \cup \left( B \cap C \right) = \left( A \cup B \right) \cap \left( A \cup C \right)$ und $A \cap \left( B \cup C \right) = \left( A \cap B \right) \cup \left( A \cap C \right)$
+\item De Morgansche Gesetze: $\neg \left( A \cup B \right) = \neg A \cap \neg B$ und $\neg \left( A \cap B \right) = \neg A \cup \neg B$
+\item Absorptionsgesetz: $A \cup \left( A \cap B \right) =A$ und $A \cap \left( A \cup B \right) = A$
+
+Differenzmenge:
+\item Assoziativgesetze: $(A \setminus B) \setminus C = A \setminus (B \cup C)$ und $A \setminus (B \setminus C) = (A \setminus B) \cup (A \cap C)$
+\item Distributivgesetze: $(A \cap B) \setminus C = (A \setminus C) \cap (B \setminus C)$ und $(A \cup B) \setminus C = (A \setminus C) \cup (B \setminus C)$ und $A \setminus (B \cap C) = (A \setminus B) \cup (A \setminus C)$ und $A \setminus (B \cup C) = (A \setminus B) \cap (A \setminus C)$ 
+
+Sonstiges:
+\item $A \triangle B = \neg A \triangle \neg B$
+\item $A \setminus B = \neg B \setminus \neg A = A \cap \neg B$
+\end{itemize}  \normalsize
+
+Kartesisches Produkt:\\
+%https://de.wikipedia.org/wiki/Kartesisches_Produkt
+$A \times B := \left\{ (a, b) \mid a \in A, b \in B \right\}$ \\
+$A^2 = A \times A = \left\{ (a, a') \mid a, a' \in A \right\}$ \\
+Sei $A=\{ a, b, c \} und B=\{ x, y \}$ dann gilt: \\
+$A \times B = \left\{ (a,x), (a,y), (b,x), (b,y), (c,x), (c,y) \right\}$ \\
+$B \times A = \left\{ (x,a), (x,b), (x,c), (y,a), (y,b), (y,c) \right\}$ \\
+$A \times A = \left\{ (a,a), (a,b), (a,c), (b,a), (b,b), (b,c), (c,a), (c,b), (c,c) \right\}$\\
+Ausserdem: $\mathopen| A_1 \times A_2 \times A_3 \times ... \times A_n \mathclose| = \mathopen|A_1\mathclose|*\mathopen|A_2\mathclose|*\mathopen|A_3\mathclose|*...*\mathopen|A_n\mathclose|$ wenn $A_1$ bis $A_n$ endlich sind.\\
+
+
+Summen\\
+%https://de.wikipedia.org/wiki/Summe
+%https://de.wikipedia.org/wiki/Geometrische_Reihe
+%https://de.wikibooks.org/wiki/Mathe_f%C3%BCr_Nicht-Freaks:_Summe_und_Produkt
+Sei $m>n$ dann gilt: $\sum_{k=m}^{n}a_k = 0$\\ \\
+{\bfseries Gauss}: $\sum_{i=1}^n{i} = 1+2+...+n = \frac{n(n+1)}{2}$ \\ \\
+{\bfseries Konstantes Glied}(wie bei Gauss): $\sum_{k=m}^{n}x = (n-m+1)x$ \\ \\
+$\sum_{k=m}^{n}c\cdot a_k = c\cdot \sum_{k=m}^{n}a_k$ \\ \\
+{\bfseries Geometrische Reihe}: $s_n=a_0\sum_{k=0}^{n} q^k = a_0\frac{1-q^{n+1}}{1-q}$ \\ \\
+{\bfseries Aufteilung}: $\sum_{k=m}^n a(k) = \sum_{k=m}^l a(k) + \sum_{k=l+1}^n a(k)$ \\ \\
+
+Vollst{\"a}ndige Induktion\\
+%https://de.wikipedia.org/wiki/Vollst%C3%A4ndige_Induktion
+Die Gau{\"ss}sche Summenformel lautet: F{\"u}r alle nat{\"u}rliche Zahlen n $\geq$ 1 gilt
+$$\sum^n_{k=1} k = 1+2+\cdots+n = \frac{n(n+1)}{2})$$
+Der Induktionsanfang ergibt sich unmittelbar: $$\sum^1_{k=1} k = 1 = \frac{1(1+1)}{2}$$ \\
+Der Induktionsschritt wird {\"u}ber folgende Gleichungskette gewonnen, bei der die Induktionsvoraussetzung mit der zweiten Umformung verwendet wird: $$\sum^{n+1}_{k=1} k = \sum^n_{k=1} k + (n+1) = \frac{n(n+1)}{2}+(n+1)\\ =\frac{n(n+1)+2(n+1)}{2} = \frac{(n+1)(n+2)}{2}$$ \\ \\
+
+
+Relationen \\
+%https://de.wikipedia.org/wiki/Adjazenzmatrix
+%https://de.wikipedia.org/wiki/Relation_%28Mathematik%29
+Eine Relation ist eine Teilmenge des Kreuzprodukt zweier Mengen: $R \subseteq A \times B$ \\
+Sei Relation R $\subseteq {[}4{]}^2$ und R = $\{(1,2), (2,1), (2,3), (3,4) (4,3)\}$, dann ist die Adjazenzmatrix R = $\begin{pmatrix} 0 & 1 & 0 & 0 \\ 1 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{pmatrix} $ \\
+{\bfseries Verkettung}: $S \circ R := RS := \{(a,d) \in A \times D \mid \exists ~ b \in B \cap C\colon (a,b) \in R \land (b,d) \in S\}$ \\
+{\bfseries Umkehrrelation}: $R^{-1} = \{(b,a) \in B \times A \mid (a,b) \in R\}$ Man erh{\"a}lt die Umkehrrelation an einem Graphen indem man die Pfeilspitzen umdreht. An der Adjazenzmatrix muss man alle 1en an der Hauptdiagonalen spiegeln. \\
+
+Eigentschaften von Relationen: \\
+{\bfseries Reflexivit{\"a}t(R):} $\forall a \in A\colon (a,a) \in R$ Jedes Element steht zu sich selbst in Relation. Die Hauptdiagonale ist 1. \\
+{\bfseries Symmetrie(S):} $\forall a,b \in A\colon (a,b) \in R \Rightarrow\ (b,a) \in R$ Pfeilspitzen sind immer auf beiden Seiten, k{\"o}nnen dann auch weggelassen werden(ungerichtet Graph). Die Adjazenzmatrix ist symmetrisch zur Hauptdiagonalen\\
+{\bfseries Transitivit{\"a}t(T):} $\forall a,b,c \in A\colon (a,b) \in R \,\land\, (b,c) \in R \Rightarrow (a,c) \in R$ Wenn es einen Weg {\"u}ber mehrere Relationen von einem Knoten zum Anderen gibt, m{\"u}ssen diese auch direkt in Relation stehen. \\
+{\bfseries Asymmetrie:} $\forall a,b \in A\colon (a,b) \in R \Rightarrow (b,a) \notin R$ Pfeilspitze immer nur auf maximal einer Seite. Keine Reflexivit{\"a}t. \\
+{\bfseries Antisymmetrie(AS):} $\forall a,b \in A\colon (a,b) \in R \,\land\, (b,a) \in R \Rightarrow\; a = b$ Gleich wie Asymmetrie, aber Reflexivit{\"a}t ist erlaubt. \\
+{\bfseries Totalit{\"a}t(TO):} $\forall a,b \in A\colon (a,b) \in R \,\lor\, (b,a) \in R$ Zwischen zwei beliebigen Knoten gibt es immer eine Relation in mindestens eine Richtung.\\
+R hei{\ss}t {\bfseries {\"A}quivalenzrelation} wenn (R), (S) und (T) gelten. \\
+R hei{\ss}t {\bfseries Halbordnung} wenn (R), (AS) und (T) gelten. \\
+R hei{\ss}t {\bfseries (Totale) Ordnung} wenn sie eine Halbordnung ist und (TO) erf{\"u}llt. \\
+%https://de.wikipedia.org/wiki/%C3%84quivalenzrelation
+Die {\bfseries {\"A}quivalenzklasse} eines Objektes a ist die Klasse der Objekte, die {\"a}quivalent zu a sind. Sei R $\subseteq A^2$. \\$[a]_R = \{x\in A\mid (x,a) \in R\} \subseteq M$\\
+Der {\bfseries Quotient} von R bez{\"u}glich R ist die Menge A/R = $\{{[}a{[}_R\mid a\subseteq A\}$ (Die Anzahl {\"A}quivalenzklassen)\\
+Ein Graph l{\"a}sst sich zu einer Halbordnung erweitern, wenn er azyklisch ist(da Symmetrie $\implies$ azyklisch)\\
+\\
+Eine Relation hei{\ss}t {\bfseries Funktion}, wenn sie eindeutig ist, sprich von jedem Knoten genau ein Pfeil weggeht. Eine Funktion f ordnet jedem Element x einer Definitionsmenge D genau ein Element y einer Zielmenge Z zu. $f\colon\, D\to Z,\; x\mapsto y.$\\
+Eine Funktion ist {\bfseries injektiv}, wenn jedes Element der Zielmenge h{\"o}chstens ein Urbild hat. D. h. aus $f(x_1) = y = f(x_2)$ folgt $x_1=x_2$.\\
+Sie ist {\bfseries surjektiv}, wenn jedes Element der Zielmenge mindestens ein Urbild hat. D. h. zu beliebigem y gibt es ein x, so dass f(x)=y.\\
+Gelten diese beiden Eigenschaften f{\"u}r f, nennt man f {\bfseries bijektiv}. wenn eine Funktion bijektiv ist ihre Umkehrfunktion($f^{-1}$) auch eine (bijektive) Funktion.\\
+Eine bijektive Funktion $f\colon\,${[}n{]}$\to${[}n{]} hei{\ss}t {\bfseries Permutation}. Die Adjazentmatrix einer Permutation hat in jeder Spalte und Zeile genau eine 1.\\
+Die Vorgehensweise um die n{\"a}chstgr{\"o}{\ss}ten Permutation zu bestimmen ist:\begin{enumerate}
+\item Bestimme l{\"a}ngstes abfallend-sortiertes Endst{\"u}ck.
+\item Erh{\"o}he vorgehende Zahl kleinstm{\"o}glich mit einer der Ziffer rechts davon.
+\item Sortiere Endst{\"u}ck aufsteigend.
+\end{enumerate}
+
+
+Graphentheorie\\
+Ein ungerichteter Graph G=(V,E) hei{\ss}t {\bfseries Baum}, falls G azyklisch und zusammenh{\"a}ngend ist.\\
+Ein ungerichteter Graph G=(V,E) hei{\ss}t {\bfseries Wald}, falls G azyklisch ist. Die Anzahl der benachbarten Knoten eines Knoten v nennt man {\bfseries grad(v)}. Ist grad(v) = 1 hei{\ss}t der Knoten {\bfseries Blatt}.  \\
+Man nennt einen Graph {\bfseries planar}, wenn man ihn ohne {\"U}berschneidungen zeichnen kann. Der {\bfseries Satz von Kuratowski} besagt, dass K5 und K3,3 die einzig nichtplanaren Graphen sind, ein nichtplanarer Graph muss also einer der beiden Graphen als Minor enthalten.\\
+
+
+Kombinatorik\\ \\
+\resizebox{11cm}{!} {
+\begin{tabular}{|c|c|c|} \hline
+& Ohne Zur{\"u}cklegen & Mit Zur{\"u}cklegen \\ \hline
+Ohne Reihenfolge  & $n \choose k$ = $n \choose  {n-k}$ & ${n+k-1} \choose k$ \\ \hline
+Mit Reihenfolge & $n^{\underline k} = \frac{n!}{(n-k)!}$ & $n^k$ \\ \hline
+\end{tabular}
+}
+\\\\
+Rechenregeln:\begin{itemize}
+	\item wenn $k > n$ dann gilt $\binom nk=0$ 
+    \item $\binom n0 = \binom nn = 1$
+    \item $\binom n1 = \binom n{n-1} = n$\\
+    \item $\binom n2 = \frac{n(n-1)}2$\\
+    \item $k \cdot \binom nk = n \cdot \binom{n-1}{k-1}$\\
+    \item $\binom{n+1}{k+1} = \binom nk + \binom n{k+1}$\\
+\end{itemize}
+Binomialtheorem:\\
+$(x+y)^3 = x^3 + 3x^2y + 3xy^2 + y^3$, \\ $(x+y)^4 = x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + y^4$ 
+\begin{itemize}
+\item $(x+y)^n = \sum_{k=0}^n {n \choose k}x^{n-k}y^k = \sum_{k=0}^n {n \choose k}x^{k}y^{n-k}$
+\item $(1+x)^n = \sum_{k=0}^n {n \choose k}x^k$
+\item $(x+y+z)^n = \sum_{k=0}^n \sum_{l=0}^{n-k} {{n \choose {k,l}} x^k y^l z^{n-k-l}}$ wobei ${n \choose {k,l}} = \frac{n!}{k!l!(n-k-l)!}$
+\end{itemize}
+K{\"u}rzeste Gitterwege\\
+Es gibt w(s,t) = ${a+b} \choose a$ = ${a+b} \choose b$ k{\"u}rzeste Wege von s nach t in einem a$\times$b-Gitter.\\Ist der Punkt c gesperrt dann gibt es w(s,t) - {${{a+c} \choose a} * {{b+c} \choose c}$ Wege.\\ Wenn Punkt c und d gegeben sind und mindestens einer der beiden besucht werden muss gilt: $w(a,c)*w(c,b) + w(a,d) * w(d,b) - w(a,c) * w(c,d) * w(d,b)$.\\
+Umformuliert: ${{a+c} \choose a} * {{b+c} \choose c} - {{a+d} \choose a} * {{b+d} \choose b} - {{a+c} \choose a} * {{c+d} \choose c} * {{b+d} \choose b}$
+    \end{document}

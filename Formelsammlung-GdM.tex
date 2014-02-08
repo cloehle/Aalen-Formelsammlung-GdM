@@ -5,8 +5,9 @@
 \usepackage[margin=0.5in]{geometry}
 \usepackage{float}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \begin{document}
-Formelsammlung - Grundlagen der Mathematik - Stand: 17.01.2014 - Christian L{\"o}hle\\
+Formelsammlung - Grundlagen der Mathematik - Stand: 02.02.2014 - Christian L{\"o}hle\\
 \footnotesize Dieses Werk ist unter der Creative-Commons-Lizenz vom Typ Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International lizenziert. Um eine Kopie dieser Lizenz einzusehen, besuchen Sie http://creativecommons.org/licenses/by-sa/4.0/ oder schreiben Sie einen Brief an Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.\\\normalsize
 
 Logik \\ \\
@@ -67,7 +68,7 @@ Operationen auf Mengen:
 \begin{itemize}\itemsep0em\small
 \item Schnitt: $A \cap B := \{ x \mid \left( x \in A \right) \land \left( x \in B \right) \}$
 \item Vereinigung: $A \cup B := \{ x \mid \left( x \in {A} \right) \lor \left( x \in B \right) \}$
-\item Differenz: $A \setminus B := \{ x \mid \left( x\in A \right) \land \left( x\not \in B \right) \}$
+\item Differenz: $A \setminus B := \{ x \mid \left( x\in A \right) \land \left( x\not \in B \right) \} = A \cap \neg B$
 \item Symmetrische Differenz: $A \, \triangle \, B := \left( A \setminus B \right) \cup \left( B \setminus A \right) = ( A \cup B) \setminus (A \cap B) $
 \end{itemize}  \normalsize
 Rechengesetze:\itemsep0em\small
@@ -89,7 +90,7 @@ Differenzmenge:
 
 Sonstiges:
 \item $A \triangle B = \neg A \triangle \neg B$
-\item $A \setminus B = \neg B \setminus \neg A = A \cap \neg B$
+\item $A \setminus B = \neg B \setminus \neg A$
 \end{itemize}  \normalsize
 
 Kartesisches Produkt:\\
@@ -130,7 +131,7 @@ Sei Relation R $\subseteq {[}4{]}^2$ und R = $\{(1,2), (2,1), (2,3), (3,4) (4,3)
 {\bfseries Verkettung}: $S \circ R := RS := \{(a,d) \in A \times D \mid \exists ~ b \in B \cap C\colon (a,b) \in R \land (b,d) \in S\}$ \\
 {\bfseries Umkehrrelation}: $R^{-1} = \{(b,a) \in B \times A \mid (a,b) \in R\}$ Man erh{\"a}lt die Umkehrrelation an einem Graphen indem man die Pfeilspitzen umdreht. An der Adjazenzmatrix muss man alle 1en an der Hauptdiagonalen spiegeln. \\
 
-Eigentschaften von Relationen: \\
+Eigenschaften von Relationen: \\
 {\bfseries Reflexivit{\"a}t(R):} $\forall a \in A\colon (a,a) \in R$ Jedes Element steht zu sich selbst in Relation. Die Hauptdiagonale ist 1. \\
 {\bfseries Symmetrie(S):} $\forall a,b \in A\colon (a,b) \in R \Rightarrow\ (b,a) \in R$ Pfeilspitzen sind immer auf beiden Seiten, k{\"o}nnen dann auch weggelassen werden(ungerichtet Graph). Die Adjazenzmatrix ist symmetrisch zur Hauptdiagonalen\\
 {\bfseries Transitivit{\"a}t(T):} $\forall a,b,c \in A\colon (a,b) \in R \,\land\, (b,c) \in R \Rightarrow (a,c) \in R$ Wenn es einen Weg {\"u}ber mehrere Relationen von einem Knoten zum Anderen gibt, m{\"u}ssen diese auch direkt in Relation stehen. \\
@@ -143,13 +144,22 @@ R hei{\ss}t {\bfseries (Totale) Ordnung} wenn sie eine Halbordnung ist und (TO) 
 %https://de.wikipedia.org/wiki/%C3%84quivalenzrelation
 Die {\bfseries {\"A}quivalenzklasse} eines Objektes a ist die Klasse der Objekte, die {\"a}quivalent zu a sind. Sei R $\subseteq A^2$. \\$[a]_R = \{x\in A\mid (x,a) \in R\} \subseteq M$\\
 Der {\bfseries Quotient} von R bez{\"u}glich R ist die Menge A/R = $\{{[}a{[}_R\mid a\subseteq A\}$ (Die Anzahl {\"A}quivalenzklassen)\\
-Ein Graph l{\"a}sst sich zu einer Halbordnung erweitern, wenn er azyklisch ist(da Symmetrie $\implies$ azyklisch)\\
+Ein Graph beschreibt nur dann eine Halbordnung, wenn er azyklisch ist(da Symmetrie $\implies$ azyklisch)\\
 \\
 Eine Relation hei{\ss}t {\bfseries Funktion}, wenn sie eindeutig ist, sprich von jedem Knoten genau ein Pfeil weggeht. Eine Funktion f ordnet jedem Element x einer Definitionsmenge D genau ein Element y einer Zielmenge Z zu. $f\colon\, D\to Z,\; x\mapsto y.$\\
 Eine Funktion ist {\bfseries injektiv}, wenn jedes Element der Zielmenge h{\"o}chstens ein Urbild hat. D. h. aus $f(x_1) = y = f(x_2)$ folgt $x_1=x_2$.\\
 Sie ist {\bfseries surjektiv}, wenn jedes Element der Zielmenge mindestens ein Urbild hat. D. h. zu beliebigem y gibt es ein x, so dass f(x)=y.\\
 Gelten diese beiden Eigenschaften f{\"u}r f, nennt man f {\bfseries bijektiv}. wenn eine Funktion bijektiv ist ihre Umkehrfunktion($f^{-1}$) auch eine (bijektive) Funktion.\\
-Eine bijektive Funktion $f\colon\,${[}n{]}$\to${[}n{]} hei{\ss}t {\bfseries Permutation}. Die Adjazentmatrix einer Permutation hat in jeder Spalte und Zeile genau eine 1.\\
+Eine bijektive Funktion $f\colon\,${[}n{]}$\to${[}n{]} hei{\ss}t {\bfseries Permutation}. Die Adjazentmatrix einer Permutation hat in jeder Spalte und Zeile genau eine 1.\hspace{5mm} $\varphi ^{0} =\; id$\hspace{5mm} $\varphi ^2 = \varphi \circ \varphi$ \\
+Bsp: $S_6$\\
+\begin{tabular}{c|c|c|c|c|c|c}
+$k$ & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+$\varphi (k)$ & 4 & 6 & 5 & 2 & 3 & 1 \\ \hline
+$\varphi ^2$ & 2 & 1 & 3 & 6 & 5 & 4 \\ \hline
+$\varphi ^0$ & 1 & 2 & 3 & 4 & 5 & 6 \\
+
+\end{tabular}\\
+Die Ordnung von $\varphi$ ist dann wie oft sich $\varphi$ mit sich selbst verkn{\"u}pfen l{\"a}sst bis wieder $id$ herauskommt und eins dazu addiert(wegen $\varphi ^0$). Die Ordnung von dem Beispiel w{\"a}re 5 da $\varphi ^4 = \varphi ^0$.\\
 Die Vorgehensweise um die n{\"a}chstgr{\"o}{\ss}ten Permutation zu bestimmen ist:\begin{enumerate}
 \item Bestimme l{\"a}ngstes abfallend-sortiertes Endst{\"u}ck.
 \item Erh{\"o}he vorgehende Zahl kleinstm{\"o}glich mit einer der Ziffer rechts davon.
@@ -188,6 +198,75 @@ $(x+y)^3 = x^3 + 3x^2y + 3xy^2 + y^3$, \\ $(x+y)^4 = x^4 + 4x^3y + 6x^2y^2 + 4xy
 \item $(x+y+z)^n = \sum_{k=0}^n \sum_{l=0}^{n-k} {{n \choose {k,l}} x^k y^l z^{n-k-l}}$ wobei ${n \choose {k,l}} = \frac{n!}{k!l!(n-k-l)!}$
 \end{itemize}
 K{\"u}rzeste Gitterwege\\
-Es gibt w(s,t) = ${a+b} \choose a$ = ${a+b} \choose b$ k{\"u}rzeste Wege von s nach t in einem a$\times$b-Gitter.\\Ist der Punkt c gesperrt dann gibt es w(s,t) - {${{a+c} \choose a} * {{b+c} \choose c}$ Wege.\\ Wenn Punkt c und d gegeben sind und mindestens einer der beiden besucht werden muss gilt: $w(a,c)*w(c,b) + w(a,d) * w(d,b) - w(a,c) * w(c,d) * w(d,b)$.\\
-Umformuliert: ${{a+c} \choose a} * {{b+c} \choose c} - {{a+d} \choose a} * {{b+d} \choose b} - {{a+c} \choose a} * {{c+d} \choose c} * {{b+d} \choose b}$
+Es gibt w(s,t) = ${a+b} \choose a$ = ${a+b} \choose b$ k{\"u}rzeste Wege von s nach t in einem a$\times$b-Gitter.\\Ist der Punkt c gesperrt dann gibt es $w(s,t) - {{a+c} \choose a} * {{b+c} \choose c}$ Wege.\\ Wenn Punkt c und d gegeben sind und mindestens einer der beiden besucht werden muss gilt: $w(a,c)*w(c,b) + w(a,d) * w(d,b) - w(a,c) * w(c,d) * w(d,b)$.\\
+Umformuliert: ${{a+c} \choose a} * {{b+c} \choose c} - {{a+d} \choose a} * {{b+d} \choose b} - {{a+c} \choose a} * {{c+d} \choose c} * {{b+d} \choose b}$\\
+
+
+Zahlentheorie\\
+F{\"u}r m,n $\in \mathbb{Z}$ und $m > 0$, ist m {\bfseries Teiler von} n, falls $\exists t\in \mathbb{Z} \; n=t*m$. Kurz: $m\backslash n$.\\
+Die Menge aller Teiler ist $T_n = \{\: m \; |\;  m\backslash n \: \}$. $T_{m,n} = T_m \cap T_n$.\\
+Der {\bfseries gr{\"o}{\ss}te gemeinsame Teiler} von n und m ist: max $T_{m,n}$. Das {\bfseries kleinste gemeinsame Vielfache} ist: min $\{\: k \; |\; m\backslash k \: \land \: n \backslash k \: \}$.\\
+Es gilt $kgV(m,n) * ggT(m,n) = mn$ oder $kgV(m,n) = mn / ggT(m,n)$.\\
+Lemmas: 1) $\forall a,b \in \mathbb{Z} \; \; T_{m,n} \subseteq T_{am+bn}\;\;$ 2) $\forall a \in \mathbb{Z} \; \; T_{m,n} = T_{m,n-am}\; \;$ 3) $T_{m,n} = T_{ggT(m,n)}$\\
+Der {\bfseries euklidische Algorithmus} $euklid(m,n)$ bestimmt den ggT:(f{\"u}r $m<n$)\\
+$if\; m = 0\; return\; n$\\ $else\; euklid(n\; mod\; m, m)$\\
+Der ggT l{\"a}sst sich als Linearkombination von m und n darstellen, berechnet wird diese mithilfe des {\bfseries erweiterten euklidischen Algorithmus}:\\ \\
+ \begin{tabular}{|c|c|c|c| |c|c|}\hline
+  n  & m  & q & r  & x  & y \\ \hline
+  84 & 60 & 1 & 24 & -2 & $1 - (-2)*1 = 3$ \\ \hline
+  60 & 24 & 2 & 12 & 1  & $0-1*2=-2$ \\ \hline
+  24 & 12 & 2 & 0  & 0  & 1 \\ \hline
+ \end{tabular}
+Hierbei muss auch wieder $m \leq n$ gelten.
+Allgemein betrachtet(Zeile 0 ist die unterste):\\ $q_i = \lfloor \frac{n_i}{m_i} \rfloor$ \hspace{5mm} $r_i = n_i\; mod\; m_i$\\
+$x_0 = 0$ $y_0 = x_1 = 1$ \hspace{5mm} $x_i = y_{i-1}$ \hspace{5mm} $y_i=x_{-1}-q_i*y_{-1}$ \\ Als Probe: $n_i*x_i+m_i*y_I = ggT(m,n)$ gilt in jeder Zeile.\\\\
+Kongruenzen\\
+$a \equiv b \; (mod\; m) \Longleftrightarrow m \backslash (a-b)$\\
+Seien $a \equiv b \; (mod\; m)$ und $c \equiv d \; (mod\; m)\; $ Dann gilt:\\
+1) $a+c \equiv b+d \; (mod\; m)\; \;$ 2) $a-c \equiv b-d \; (mod\; m)\; \;$ 3) $ac \equiv bd \; (mod\; m)\; \;$\\
+Ist $a \equiv b \; (mod\; m),\; $ dann ist $a^n \equiv b^n \; (mod\; m)$\\
+Die Division gilt nur wenn der Quotient teilerfremd zu m ist: Sei $d \bot m$ und $ad \equiv bd \; (mod\; m)$, dann gilt $a \equiv b \; (mod\; m)$.\\
+ist $a \bot m$, dann hat die Kongruenz $ax \equiv b\; (mod\; m)$ die in $\mathbb{Z}_m$ eindeutige L{\"o}sung $x=a^{-1}b\; mod\;m$. Man erh{\"a}lt $a^{-1}$ indem man den erweiterten euklidischen Algorithmus auf $a$ und $m$ anwendet.\\
+Die Anzahl der teilerfremdem Zahlen $m$ in $\mathbb{Z}_m$ wird als {\bfseries eulersche $\varphi$-Funktion} bezeichnet: $\varphi (m) = \mathopen| \mathbb{Z}^{*}_m \mathclose| $\\ Es gilt: $
+    \varphi (m \cdot n) = \varphi (m) \cdot \varphi (n) $\\
+F{\"u}r Primzahlen: $\varphi(p) = p-1$\\
+F{\"u}r Primzahlpotenzen: $\varphi(p^k) = p^k-p^{k-1} = p^{k-1}(p-1)= p^{k}\left(1-\frac1{p}\right)$\\ z.B. $\varphi(16)=\varphi(2^4)=2^4-2^3=2^3\cdot (2-1)=2^4\cdot \left(1-\frac12\right) =8 $\\
+Allgemein: $\varphi(n) = \prod_{p\mid n} p^{k_p-1}(p-1) = n \prod_{p\mid n}\left(1-\frac{1}{p}\right) $\\
+z.B. $\varphi (84) = \varphi (2^2*3*7)=84*(1-\frac{1}{2})*(1-\frac{1}{3})*(1-\frac{1}{7})=24$\\
+{\bfseries Exponentation}: $a^{\varphi (m)} \equiv 1\;(mod\;m)$\\
+z.B. $5^{99} (mod\;84)\;$\hspace{3mm}$ \varphi (84) = 24 \longrightarrow 5^{24}*5^{24}*5^{24}*5^3 = 1*1*1*125 \equiv 41\; (mod\; 84)$\\
+\\
+Lineare Kongruenzen(Chinesischer Restsatz)\\
+Ist ein Gleichungssystem der folgenden Art gegeben:\\
+$x \equiv a_1\; mod\; m_1$\\ $x \equiv a_2\; mod\; m_2$\\
+Dann bestimmt man $x_1$ und $x_2$ mithilfe des erweiterten euklidischen Algorithmus jeweils {\"u}ber $m_1$ und $m_2$:\\
+$m_2 * x_1 \equiv 1\; mod\; m_1$ \\ $m_1 * x_2 \equiv 1\; mod\; m_2$\\
+Dann gilt: $x=a_1*m_2*x_1+a_2*m_1*x_2$.\\
+
+
+Algebraische Strukturen\\
+$(G,\; \circ)$ hei{\ss}t {\bfseries Gruppe} falls folgende Eigenschaften gelten:\\
+{\bfseries (AG) Assoziativgesetz}: $\forall a,b,c, \in G$ \hspace{5mm} $a \circ (b \circ c) = (a \circ b) \circ c$\\
+{\bfseries (N) Neutrales Element}: $\exists e \in G\; \forall a \in G$\hspace{5mm} $a \circ e = a$\\
+{\bfseries (I) Inverses Element}: $\forall a \in G\; \exists b \in G$\hspace{5mm} $a \circ b = e$\\
+Die Verkn{\"u}pfung muss au{\ss}erdem abgeschlossen {\"u}ber $G$ sein.
+Falls auch auch das Kommutativgesetz(KG) $a \circ b = b \circ a$ gilt, hei{\ss}t die Gruppe kommutativ(oder abelsch).\\
+Ist $U \subseteq G$ und $(U,\; \circ)$ ebenfalls eine Gruppe, hei{\ss}t sie {\bfseries Untergruppe}. \{e\} und G sind {\bfseries triviale Untergruppen}.
+Sei $(G,\; \circ)$ endliche Gruppe und $a\in G$. Dann ist $<a> = \{a^0, a^1, a^2,...\}$ die von $a$ {\bfseries erzeugte Untergruppe}. $a$ hei{\ss}t {\bfseries Generator} oder {\bfseries erzeugendes Element} von $G$.\\
+$\mathopen| U \mathclose|$ hei{\ss}t {\bfseries Ordnung} von $<a>$ und teilt immer $\mathopen| G \mathclose|$.\\
+$(R,+,\cdot)$ hei{\ss}t {\bfseries Ring} falls:\\
+1) $(R,+)$ ist kommutative Gruppe. \hspace{2mm} 2) (AG) $\forall a,b,c, \in G$ \hspace{3mm} $a \cdot (b \cdot c) = (a \cdot b) \cdot c$ \\
+3)(DG) $\forall a,b,c, \in G$ \hspace{3mm} $a \cdot (b + c) = a \cdot b + a \cdot c$\\
+R ist kommutativer Ring falls $\forall a,b \in R$\hspace{3mm}$a \cdot b = b \cdot a$\\
+R ist Ring mit {\bfseries Eins(-Element)} falls $\exists 1 \in R$\hspace{3mm} $a\cdot 1 = a$\\
+
+
+RSA\\
+W{\"a}hle zwei ungleiche Primzahlen $p$ und $q$.\\
+$N=p * q$\\
+$\varphi (N)=(p-1) * (q-1)$\\
+W{\"a}hle eine zu $\varphi (N)$ teilerfremde Zahl $e$, f{\"u}r die gilt $1<e<\varphi (N)$.\\
+Berechne den Entschl{\"a}sselungsexponenten $d$ als Multiplikatives Inverses(erweiterter euklidischer Algorithmus) von $e$ bez{\"u}glich des Moduls $\varphi (N)$. Es soll also die folgende Kongruenz gelten: $$ e * d\equiv 1\ {\bmod \ }\varphi (N)$$
+Verschl{\"u}sseln: $c\equiv m^{e}\ {\bmod \ }N$\\
+Entschl{\"u}sseln: $m\equiv c^{d}\ {\bmod \ }N$\\
     \end{document}

@@ -7,10 +7,10 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \begin{document}
-Formelsammlung - Grundlagen der Mathematik - Stand: 02.02.2014 - Christian L{\"o}hle\\
-\footnotesize Dieses Werk ist unter der Creative-Commons-Lizenz vom Typ Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International lizenziert. Um eine Kopie dieser Lizenz einzusehen, besuchen Sie http://creativecommons.org/licenses/by-sa/4.0/ oder schreiben Sie einen Brief an Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.\\\normalsize
+Formelsammlung - Grundlagen der Mathematik - Stand: 09.02.2014 - Christian L{\"o}hle\\
+\footnotesize Dieses Werk ist unter der Creative-Commons-Lizenz vom Typ Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International lizenziert. Um eine Kopie dieser Lizenz einzusehen, besuchen Sie http://creativecommons.org/licenses/by-sa/4.0/ oder schreiben Sie einen Brief an Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.\normalsize
 
-Logik \\ \\
+\section{Logik}
 %https://de.wikipedia.org/wiki/Formelsammlung_Logik
 %https://de.wikipedia.org/wiki/Aussagenlogik
 \begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
@@ -29,16 +29,16 @@ Eine Formel F hei{\ss}t:
 \item {\bfseries Tautologie($\top$)/g{\"u}ltig}, wenn F bei jeder Variabelbelegung 1 ist.
 \end{itemize}\normalsize
 
-Rechengesetze:\\
+\subsection{Rechengesetze}
 Kommutativgesetze:\\ $x \land y = y \land x$ \\ $x \lor y = y \lor y$ \\
 Assoziativgesetze: \\ $x \land ( y \land z ) = ( x \land y ) \land z $ \\ $( x \lor y ) \lor z = x \lor( y \lor z )$ \\
 Distributivgesetze: \\ $x \land ( y \lor z ) = ( x \land y ) \lor ( x \land z )$ \\  	$x \lor ( y \land z ) = ( x \lor y ) \land ( x \lor z )$ \\
 Absorptionsgesetze: \\ $x \land ( x \lor y ) = x$ \\ $x \lor ( x \land y ) = x$\\
 De Morgansche Gesetze: \\ $\neg ( x \land y ) = \neg x \lor \neg y$ \\
-Sonstiges: \\ $x \oplus 0 = x$\\ $x \oplus 1 = \neg x$ \\ $ x \oplus y = (x \lor y) \land \neg ( x \land y ) = ( x \land \neg y ) \lor ( \neg x \land y )$ \\ $ x \Rightarrow y = \neg x \lor y $ \\
+Sonstiges: \\ $x \oplus 0 = x$\\ $x \oplus 1 = \neg x$ \\ $ x \oplus y = (x \lor y) \land \neg ( x \land y ) = ( x \land \neg y ) \lor ( \neg x \land y )$ \\ $ x \Rightarrow y = \neg x \lor y $
 %https://de.wikipedia.org/wiki/Disjunktive_Normalform
 %https://de.wikipedia.org/wiki/Konjunktive_Normalform
-Normalformen:\\
+\subsection{Normalformen}
 {\bfseries Disjunktive Normalform(DNF)} besteht aus einer Disjunktion($\lor$) von Konjunktionstermen($\land$). Nehme die Variabelbelegung(z.B. $A \land \neg B \land \neg C$) wo F=1 ist und verkn{\"u}pfe sie mit $\lor$. \\
 {\bfseries Konjunktive Normalform(KNF}) besteht aus einer Konjunktion($\land$) von Disjunktionstermen($\lor$). Nehme die Variabelbelegung(z.B. $A \land \neg B \land \neg C$) wo F=0 ist, {\bfseries negiere} sie($\neg A \land B \land C$) und verkn{\"u}pfe sie mit $\lor$. \\
 Normalformen sind m{\"o}glich, da $\land$, $\neg$ und $\lor$, $\neg$ eine vollst{\"a}ndige Basis f{\"u}r die Aussagenlogik bilden. Um zu zeigen, dass andere Operatoren ebenfalls eine vollst{\"a}ndige Basis bilden, muss man $\land$, $\neg$ oder $\lor$, $\neg$ als Formel bilden. \\
@@ -50,7 +50,7 @@ Normalformen sind m{\"o}glich, da $\land$, $\neg$ und $\lor$, $\neg$ eine vollst
 	\end{figure}\scriptsize  Lizenz: CC-by-sa 2.0{/}de Urheber: WikiBasti\normalsize \\
 
 
-Mengen \\
+\section{Mengen}
 %https://de.wikipedia.org/wiki/Menge_%28Mathematik%29
 %https://de.wikipedia.org/wiki/M%C3%A4chtigkeit_%28Mathematik%29
 %https://de.wikipedia.org/wiki/Potenzmenge
@@ -64,14 +64,14 @@ $\mathcal P(\{ a, b, c \}) = \bigl\{ \emptyset, \{ a \}, \{ b \}, \{ c \}, \{ a,
 $\mathcal P(\mathcal P(\emptyset)) = \bigl\{ \emptyset, \{\emptyset\}\bigr\}$ \\
 $\mathopen|\mathcal P(A)\mathclose| = 2^{\mathopen|A\mathclose|}$ \\
 
-Operationen auf Mengen:
+\subsection{Operationen auf Mengen}
 \begin{itemize}\itemsep0em\small
 \item Schnitt: $A \cap B := \{ x \mid \left( x \in A \right) \land \left( x \in B \right) \}$
 \item Vereinigung: $A \cup B := \{ x \mid \left( x \in {A} \right) \lor \left( x \in B \right) \}$
-\item Differenz: $A \setminus B := \{ x \mid \left( x\in A \right) \land \left( x\not \in B \right) \} = A \cap \neg B$
+\item Differenz(auch $-$): $A \setminus B := \{ x \mid \left( x\in A \right) \land \left( x\not \in B \right) \} = A \cap \neg B$
 \item Symmetrische Differenz: $A \, \triangle \, B := \left( A \setminus B \right) \cup \left( B \setminus A \right) = ( A \cup B) \setminus (A \cap B) $
 \end{itemize}  \normalsize
-Rechengesetze:\itemsep0em\small
+\subsection{Rechengesetze}\itemsep0em\small
 \begin{itemize}
 \item Reflexivit{\"a}t: $A\subseteq A$
 \item Antisymmetrie: $Aus A\subseteq B und B\subseteq A folgt A = B$
@@ -93,7 +93,7 @@ Sonstiges:
 \item $A \setminus B = \neg B \setminus \neg A$
 \end{itemize}  \normalsize
 
-Kartesisches Produkt:\\
+\subsection{Kartesisches Produkt}
 %https://de.wikipedia.org/wiki/Kartesisches_Produkt
 $A \times B := \left\{ (a, b) \mid a \in A, b \in B \right\}$ \\
 $A^2 = A \times A = \left\{ (a, a') \mid a, a' \in A \right\}$ \\
@@ -101,37 +101,36 @@ Sei $A=\{ a, b, c \} und B=\{ x, y \}$ dann gilt: \\
 $A \times B = \left\{ (a,x), (a,y), (b,x), (b,y), (c,x), (c,y) \right\}$ \\
 $B \times A = \left\{ (x,a), (x,b), (x,c), (y,a), (y,b), (y,c) \right\}$ \\
 $A \times A = \left\{ (a,a), (a,b), (a,c), (b,a), (b,b), (b,c), (c,a), (c,b), (c,c) \right\}$\\
-Ausserdem: $\mathopen| A_1 \times A_2 \times A_3 \times ... \times A_n \mathclose| = \mathopen|A_1\mathclose|*\mathopen|A_2\mathclose|*\mathopen|A_3\mathclose|*...*\mathopen|A_n\mathclose|$ wenn $A_1$ bis $A_n$ endlich sind.\\
+Ausserdem: $\mathopen| A_1 \times A_2 \times A_3 \times ... \times A_n \mathclose| = \mathopen|A_1\mathclose|*\mathopen|A_2\mathclose|*\mathopen|A_3\mathclose|*...*\mathopen|A_n\mathclose|$ wenn $A_1$ bis $A_n$ endlich sind.
 
-
-Summen\\
+\section{Summen}
 %https://de.wikipedia.org/wiki/Summe
 %https://de.wikipedia.org/wiki/Geometrische_Reihe
 %https://de.wikibooks.org/wiki/Mathe_f%C3%BCr_Nicht-Freaks:_Summe_und_Produkt
-Sei $m>n$ dann gilt: $\sum_{k=m}^{n}a_k = 0$\\ \\
-{\bfseries Gauss}: $\sum_{i=1}^n{i} = 1+2+...+n = \frac{n(n+1)}{2}$ \\ \\
-{\bfseries Konstantes Glied}(wie bei Gauss): $\sum_{k=m}^{n}x = (n-m+1)x$ \\ \\
-$\sum_{k=m}^{n}c\cdot a_k = c\cdot \sum_{k=m}^{n}a_k$ \\ \\
-{\bfseries Geometrische Reihe}: $s_n=a_0\sum_{k=0}^{n} q^k = a_0\frac{1-q^{n+1}}{1-q}$ \\ \\
-{\bfseries Aufteilung}: $\sum_{k=m}^n a(k) = \sum_{k=m}^l a(k) + \sum_{k=l+1}^n a(k)$ \\ \\
+Sei $m>n$ dann gilt: $\sum_{k=m}^{n}a_k = 0$\\
+{\bfseries Gauss}: $\sum_{i=1}^n{i} = 1+2+...+n = \frac{n(n+1)}{2}$ \\
+{\bfseries Konstantes Glied}(wie bei Gauss): $\sum_{k=m}^{n}x = (n-m+1)x$ \\
+{\bfseries Faktor} $\sum_{k=m}^{n}c\cdot a_k = c\cdot \sum_{k=m}^{n}a_k$ \\
+{\bfseries Geometrische Reihe}: $s_n=a_0\sum_{k=0}^{n} q^k = a_0\frac{1-q^{n+1}}{1-q}$ \\
+{\bfseries Aufteilung}: $\sum_{k=m}^n a(k) = \sum_{k=m}^l a(k) + \sum_{k=l+1}^n a(k)$
 
-Vollst{\"a}ndige Induktion\\
+\subsection{Vollst{\"a}ndige Induktion}
 %https://de.wikipedia.org/wiki/Vollst%C3%A4ndige_Induktion
 Die Gau{\"ss}sche Summenformel lautet: F{\"u}r alle nat{\"u}rliche Zahlen n $\geq$ 1 gilt
-$$\sum^n_{k=1} k = 1+2+\cdots+n = \frac{n(n+1)}{2})$$
-Der Induktionsanfang ergibt sich unmittelbar: $$\sum^1_{k=1} k = 1 = \frac{1(1+1)}{2}$$ \\
-Der Induktionsschritt wird {\"u}ber folgende Gleichungskette gewonnen, bei der die Induktionsvoraussetzung mit der zweiten Umformung verwendet wird: $$\sum^{n+1}_{k=1} k = \sum^n_{k=1} k + (n+1) = \frac{n(n+1)}{2}+(n+1)\\ =\frac{n(n+1)+2(n+1)}{2} = \frac{(n+1)(n+2)}{2}$$ \\ \\
+$\sum^n_{k=1} k = 1+2+\cdots+n = \frac{n(n+1)}{2})$\\
+Der Induktionsanfang ergibt sich unmittelbar: $\sum^1_{k=1} k = 1 = \frac{1(1+1)}{2}$ \\
+Der Induktionsschritt wird {\"u}ber folgende Gleichungskette gewonnen, bei der die Induktionsvoraussetzung mit der zweiten Umformung verwendet wird: $\sum^{n+1}_{k=1} k = \sum^n_{k=1} k + (n+1) = \frac{n(n+1)}{2}+(n+1)\\ =\frac{n(n+1)+2(n+1)}{2} = \frac{(n+1)(n+2)}{2}$
 
 
-Relationen \\
+\section{Relationen}
 %https://de.wikipedia.org/wiki/Adjazenzmatrix
 %https://de.wikipedia.org/wiki/Relation_%28Mathematik%29
 Eine Relation ist eine Teilmenge des Kreuzprodukt zweier Mengen: $R \subseteq A \times B$ \\
 Sei Relation R $\subseteq {[}4{]}^2$ und R = $\{(1,2), (2,1), (2,3), (3,4) (4,3)\}$, dann ist die Adjazenzmatrix R = $\begin{pmatrix} 0 & 1 & 0 & 0 \\ 1 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{pmatrix} $ \\
 {\bfseries Verkettung}: $S \circ R := RS := \{(a,d) \in A \times D \mid \exists ~ b \in B \cap C\colon (a,b) \in R \land (b,d) \in S\}$ \\
-{\bfseries Umkehrrelation}: $R^{-1} = \{(b,a) \in B \times A \mid (a,b) \in R\}$ Man erh{\"a}lt die Umkehrrelation an einem Graphen indem man die Pfeilspitzen umdreht. An der Adjazenzmatrix muss man alle 1en an der Hauptdiagonalen spiegeln. \\
+{\bfseries Umkehrrelation}: $R^{-1} = \{(b,a) \in B \times A \mid (a,b) \in R\}$ Man erh{\"a}lt die Umkehrrelation an einem Graphen indem man die Pfeilspitzen umdreht. An der Adjazenzmatrix muss man alle 1en an der Hauptdiagonalen spiegeln.
 
-Eigenschaften von Relationen: \\
+\subsection{Eigenschaften von Relationen}
 {\bfseries Reflexivit{\"a}t(R):} $\forall a \in A\colon (a,a) \in R$ Jedes Element steht zu sich selbst in Relation. Die Hauptdiagonale ist 1. \\
 {\bfseries Symmetrie(S):} $\forall a,b \in A\colon (a,b) \in R \Rightarrow\ (b,a) \in R$ Pfeilspitzen sind immer auf beiden Seiten, k{\"o}nnen dann auch weggelassen werden(ungerichtet Graph). Die Adjazenzmatrix ist symmetrisch zur Hauptdiagonalen\\
 {\bfseries Transitivit{\"a}t(T):} $\forall a,b,c \in A\colon (a,b) \in R \,\land\, (b,c) \in R \Rightarrow (a,c) \in R$ Wenn es einen Weg {\"u}ber mehrere Relationen von einem Knoten zum Anderen gibt, m{\"u}ssen diese auch direkt in Relation stehen. \\
@@ -144,12 +143,15 @@ R hei{\ss}t {\bfseries (Totale) Ordnung} wenn sie eine Halbordnung ist und (TO) 
 %https://de.wikipedia.org/wiki/%C3%84quivalenzrelation
 Die {\bfseries {\"A}quivalenzklasse} eines Objektes a ist die Klasse der Objekte, die {\"a}quivalent zu a sind. Sei R $\subseteq A^2$. \\$[a]_R = \{x\in A\mid (x,a) \in R\} \subseteq M$\\
 Der {\bfseries Quotient} von R bez{\"u}glich R ist die Menge A/R = $\{{[}a{[}_R\mid a\subseteq A\}$ (Die Anzahl {\"A}quivalenzklassen)\\
-Ein Graph beschreibt nur dann eine Halbordnung, wenn er azyklisch ist(da Symmetrie $\implies$ azyklisch)\\
-\\
+Ein Graph beschreibt nur dann eine Halbordnung, wenn er azyklisch ist.
+
+\subsection{Funktionen}
 Eine Relation hei{\ss}t {\bfseries Funktion}, wenn sie eindeutig ist, sprich von jedem Knoten genau ein Pfeil weggeht. Eine Funktion f ordnet jedem Element x einer Definitionsmenge D genau ein Element y einer Zielmenge Z zu. $f\colon\, D\to Z,\; x\mapsto y.$\\
 Eine Funktion ist {\bfseries injektiv}, wenn jedes Element der Zielmenge h{\"o}chstens ein Urbild hat. D. h. aus $f(x_1) = y = f(x_2)$ folgt $x_1=x_2$.\\
 Sie ist {\bfseries surjektiv}, wenn jedes Element der Zielmenge mindestens ein Urbild hat. D. h. zu beliebigem y gibt es ein x, so dass f(x)=y.\\
 Gelten diese beiden Eigenschaften f{\"u}r f, nennt man f {\bfseries bijektiv}. wenn eine Funktion bijektiv ist ihre Umkehrfunktion($f^{-1}$) auch eine (bijektive) Funktion.\\
+Die Anzahl der Funktionen $f\; : \; A \rightarrow B$ ist $\mathopen| B \mathclose| ^{\mathopen| A \mathclose|}$. Die Anzahl der injektiven Funktionen $f\; : \; A \rightarrow B$ ist  $\mathopen| B \mathclose| ^{\mathopen| \underline{A} \mathclose|}$.
+\subsection{Permutationen}
 Eine bijektive Funktion $f\colon\,${[}n{]}$\to${[}n{]} hei{\ss}t {\bfseries Permutation}. Die Adjazentmatrix einer Permutation hat in jeder Spalte und Zeile genau eine 1.\hspace{5mm} $\varphi ^{0} =\; id$\hspace{5mm} $\varphi ^2 = \varphi \circ \varphi$ \\
 Bsp: $S_6$\\
 \begin{tabular}{c|c|c|c|c|c|c}
@@ -159,21 +161,29 @@ $\varphi ^2$ & 2 & 1 & 3 & 6 & 5 & 4 \\ \hline
 $\varphi ^0$ & 1 & 2 & 3 & 4 & 5 & 6 \\
 
 \end{tabular}\\
-Die Ordnung von $\varphi$ ist dann wie oft sich $\varphi$ mit sich selbst verkn{\"u}pfen l{\"a}sst bis wieder $id$ herauskommt und eins dazu addiert(wegen $\varphi ^0$). Die Ordnung von dem Beispiel w{\"a}re 5 da $\varphi ^4 = \varphi ^0$.\\
-Die Vorgehensweise um die n{\"a}chstgr{\"o}{\ss}ten Permutation zu bestimmen ist:\begin{enumerate}
+Die Ordnung von $\varphi$ ist dann wie oft sich $\varphi$ mit sich selbst verkn{\"u}pfen l{\"a}sst bis wieder $id$ herauskommt. Die Ordnung von dem Beispiel w{\"a}re 4 da $\varphi ^4 = \varphi ^0$.
+Die inverse Permutation $\varphi ^{-1}$ ist $\varphi ^{ord(\varphi)-1}$.\\
+Wenn zwei verschiedene Permutationen verkn{\"u}pft werden, ist dies nicht kommutativ. Bei $\tau \circ \pi$ wird zuerst $\pi$ angewendet und auf das Resultat dann $\tau$.\\
+z.B.
+${\begin{pmatrix}1&2&3\\3&1&2\end{pmatrix}} \circ {\begin{pmatrix}1&2&3\\1&3&2\end{pmatrix}}={\begin{pmatrix}1&2&3\\3&2&1\end{pmatrix}}$\\
+Die Vorgehensweise um die n{\"a}chstgr{\"o}{\ss}te Permutation zu bestimmen ist:\begin{enumerate}
 \item Bestimme l{\"a}ngstes abfallend-sortiertes Endst{\"u}ck.
 \item Erh{\"o}he vorgehende Zahl kleinstm{\"o}glich mit einer der Ziffer rechts davon.
 \item Sortiere Endst{\"u}ck aufsteigend.
 \end{enumerate}
 
 
-Graphentheorie\\
+\section{Graphentheorie}
 Ein ungerichteter Graph G=(V,E) hei{\ss}t {\bfseries Baum}, falls G azyklisch und zusammenh{\"a}ngend ist.\\
 Ein ungerichteter Graph G=(V,E) hei{\ss}t {\bfseries Wald}, falls G azyklisch ist. Die Anzahl der benachbarten Knoten eines Knoten v nennt man {\bfseries grad(v)}. Ist grad(v) = 1 hei{\ss}t der Knoten {\bfseries Blatt}.  \\
 Man nennt einen Graph {\bfseries planar}, wenn man ihn ohne {\"U}berschneidungen zeichnen kann. Der {\bfseries Satz von Kuratowski} besagt, dass K5 und K3,3 die einzig nichtplanaren Graphen sind, ein nichtplanarer Graph muss also einer der beiden Graphen als Minor enthalten.\\
+Anzahl Gebiete(mit {\"A}u{\ss}erem Gebiet): $\mathopen| E \mathclose| -  \mathopen| V \mathclose| + 2$\\
+F{\"u}r einen planaren Graphen l{\"a}sst sich folgende Absch{\"a}tzung machen: $|E|\leq 3|V|-6$, hat er mindestens 3 Knoten dann auch: $|E|\leq 2|V|-4$. Ist diese Absch{\"a}tzung nicht erf{\"u}llt ist $G$ nicht planar, ist sie erf{\"u}llt folgt daraus aber nicht dass $G$ planar ist.\\
+Die Knotenf{\"a}rbung eines Graphen ist, wenn man die Knoten so f{\"a}rbt, dass zwei Knoten die in Relation zueinander stehen nicht dieselbe Farbe haben. Die chromatische Zahl $\chi$ ist die geringste Anzahl an Farben die der Graph ben{\"o}tigt. Bei Kreisen $C_n$ ist $\chi = 2$ wenn n gerade, und $\chi = 3$ wenn n ungerade. Ein Graph hat genau dann $\chi = 2$, wenn er bipartit ist.\\ 
+Ein Matching ist eine Auswahl an Kanten die disjunkt sind, also sich nicht an einem Knoten "ber{\"u}hren". Wenn das Matching an jedem Knoten eine Kante beinhaltet, ist es maximal und hei{\ss}t auch perfektes Matching. Das perfekte Matching von $C_n$ besteht aus $\frac{n}{2}$ Kanten wenn n gerade ist und $\frac{n-1}{2}$ wenn nicht. Bei dem vollst{\"a}ndigem Graphen $K_{n,m}$ ist es $n$, vorausgesetzt $n\leq m$.\\
+Zwei Graphen hei{\ss}en isomorph, wenn sie, bis auf Umbenennung der Knoten, gleich sind.
 
-
-Kombinatorik\\ \\
+\section{Kombinatorik}
 \resizebox{11cm}{!} {
 \begin{tabular}{|c|c|c|} \hline
 & Ohne Zur{\"u}cklegen & Mit Zur{\"u}cklegen \\ \hline
@@ -197,12 +207,13 @@ $(x+y)^3 = x^3 + 3x^2y + 3xy^2 + y^3$, \\ $(x+y)^4 = x^4 + 4x^3y + 6x^2y^2 + 4xy
 \item $(1+x)^n = \sum_{k=0}^n {n \choose k}x^k$
 \item $(x+y+z)^n = \sum_{k=0}^n \sum_{l=0}^{n-k} {{n \choose {k,l}} x^k y^l z^{n-k-l}}$ wobei ${n \choose {k,l}} = \frac{n!}{k!l!(n-k-l)!}$
 \end{itemize}
+
+
 K{\"u}rzeste Gitterwege\\
 Es gibt w(s,t) = ${a+b} \choose a$ = ${a+b} \choose b$ k{\"u}rzeste Wege von s nach t in einem a$\times$b-Gitter.\\Ist der Punkt c gesperrt dann gibt es $w(s,t) - {{a+c} \choose a} * {{b+c} \choose c}$ Wege.\\ Wenn Punkt c und d gegeben sind und mindestens einer der beiden besucht werden muss gilt: $w(a,c)*w(c,b) + w(a,d) * w(d,b) - w(a,c) * w(c,d) * w(d,b)$.\\
-Umformuliert: ${{a+c} \choose a} * {{b+c} \choose c} - {{a+d} \choose a} * {{b+d} \choose b} - {{a+c} \choose a} * {{c+d} \choose c} * {{b+d} \choose b}$\\
+Umformuliert: ${{a+c} \choose a} * {{b+c} \choose c} - {{a+d} \choose a} * {{b+d} \choose b} - {{a+c} \choose a} * {{c+d} \choose c} * {{b+d} \choose b}$
 
-
-Zahlentheorie\\
+\section{Zahlentheorie}
 F{\"u}r m,n $\in \mathbb{Z}$ und $m > 0$, ist m {\bfseries Teiler von} n, falls $\exists t\in \mathbb{Z} \; n=t*m$. Kurz: $m\backslash n$.\\
 Die Menge aller Teiler ist $T_n = \{\: m \; |\;  m\backslash n \: \}$. $T_{m,n} = T_m \cap T_n$.\\
 Der {\bfseries gr{\"o}{\ss}te gemeinsame Teiler} von n und m ist: max $T_{m,n}$. Das {\bfseries kleinste gemeinsame Vielfache} ist: min $\{\: k \; |\; m\backslash k \: \land \: n \backslash k \: \}$.\\
@@ -219,8 +230,8 @@ Der ggT l{\"a}sst sich als Linearkombination von m und n darstellen, berechnet w
  \end{tabular}
 Hierbei muss auch wieder $m \leq n$ gelten.
 Allgemein betrachtet(Zeile 0 ist die unterste):\\ $q_i = \lfloor \frac{n_i}{m_i} \rfloor$ \hspace{5mm} $r_i = n_i\; mod\; m_i$\\
-$x_0 = 0$ $y_0 = x_1 = 1$ \hspace{5mm} $x_i = y_{i-1}$ \hspace{5mm} $y_i=x_{-1}-q_i*y_{-1}$ \\ Als Probe: $n_i*x_i+m_i*y_I = ggT(m,n)$ gilt in jeder Zeile.\\\\
-Kongruenzen\\
+$x_0 = 0$ $y_0 = x_1 = 1$ \hspace{5mm} $x_i = y_{i-1}$ \hspace{5mm} $y_i=x_{-1}-q_i*y_{-1}$ \\ Als Probe: $n_i*x_i+m_i*y_I = ggT(m,n)$ gilt in jeder Zeile.
+\subsection{Kongruenzen}
 $a \equiv b \; (mod\; m) \Longleftrightarrow m \backslash (a-b)$\\
 Seien $a \equiv b \; (mod\; m)$ und $c \equiv d \; (mod\; m)\; $ Dann gilt:\\
 1) $a+c \equiv b+d \; (mod\; m)\; \;$ 2) $a-c \equiv b-d \; (mod\; m)\; \;$ 3) $ac \equiv bd \; (mod\; m)\; \;$\\
@@ -233,18 +244,18 @@ F{\"u}r Primzahlen: $\varphi(p) = p-1$\\
 F{\"u}r Primzahlpotenzen: $\varphi(p^k) = p^k-p^{k-1} = p^{k-1}(p-1)= p^{k}\left(1-\frac1{p}\right)$\\ z.B. $\varphi(16)=\varphi(2^4)=2^4-2^3=2^3\cdot (2-1)=2^4\cdot \left(1-\frac12\right) =8 $\\
 Allgemein: $\varphi(n) = \prod_{p\mid n} p^{k_p-1}(p-1) = n \prod_{p\mid n}\left(1-\frac{1}{p}\right) $\\
 z.B. $\varphi (84) = \varphi (2^2*3*7)=84*(1-\frac{1}{2})*(1-\frac{1}{3})*(1-\frac{1}{7})=24$\\
+Um die Anzahl der Teiler von n zu berechnen, braucht man die Primfaktorzerlegung($\prod {p^k}$). $\mathopen| T_n \mathclose| = \prod{(k+1)}$\\
 {\bfseries Exponentation}: $a^{\varphi (m)} \equiv 1\;(mod\;m)$\\
-z.B. $5^{99} (mod\;84)\;$\hspace{3mm}$ \varphi (84) = 24 \longrightarrow 5^{24}*5^{24}*5^{24}*5^3 = 1*1*1*125 \equiv 41\; (mod\; 84)$\\
-\\
-Lineare Kongruenzen(Chinesischer Restsatz)\\
+z.B. $5^{99} (mod\;84)\;$\hspace{3mm}$ \varphi (84) = 24 \longrightarrow 5^{24}*5^{24}*5^{24}*5^3 = 1*1*1*125 \equiv 41\; (mod\; 84)$
+
+\subsection{Lineare Kongruenzen(Chinesischer Restsatz)}
 Ist ein Gleichungssystem der folgenden Art gegeben:\\
 $x \equiv a_1\; mod\; m_1$\\ $x \equiv a_2\; mod\; m_2$\\
 Dann bestimmt man $x_1$ und $x_2$ mithilfe des erweiterten euklidischen Algorithmus jeweils {\"u}ber $m_1$ und $m_2$:\\
 $m_2 * x_1 \equiv 1\; mod\; m_1$ \\ $m_1 * x_2 \equiv 1\; mod\; m_2$\\
-Dann gilt: $x=a_1*m_2*x_1+a_2*m_1*x_2$.\\
+Dann gilt: $x=a_1*m_2*x_1+a_2*m_1*x_2$.
 
-
-Algebraische Strukturen\\
+\section{Algebraische Strukturen}
 $(G,\; \circ)$ hei{\ss}t {\bfseries Gruppe} falls folgende Eigenschaften gelten:\\
 {\bfseries (AG) Assoziativgesetz}: $\forall a,b,c, \in G$ \hspace{5mm} $a \circ (b \circ c) = (a \circ b) \circ c$\\
 {\bfseries (N) Neutrales Element}: $\exists e \in G\; \forall a \in G$\hspace{5mm} $a \circ e = a$\\
@@ -253,20 +264,20 @@ Die Verkn{\"u}pfung muss au{\ss}erdem abgeschlossen {\"u}ber $G$ sein.
 Falls auch auch das Kommutativgesetz(KG) $a \circ b = b \circ a$ gilt, hei{\ss}t die Gruppe kommutativ(oder abelsch).\\
 Ist $U \subseteq G$ und $(U,\; \circ)$ ebenfalls eine Gruppe, hei{\ss}t sie {\bfseries Untergruppe}. \{e\} und G sind {\bfseries triviale Untergruppen}.
 Sei $(G,\; \circ)$ endliche Gruppe und $a\in G$. Dann ist $<a> = \{a^0, a^1, a^2,...\}$ die von $a$ {\bfseries erzeugte Untergruppe}. $a$ hei{\ss}t {\bfseries Generator} oder {\bfseries erzeugendes Element} von $G$.\\
-$\mathopen| U \mathclose|$ hei{\ss}t {\bfseries Ordnung} von $<a>$ und teilt immer $\mathopen| G \mathclose|$.\\
+$\mathopen| U \mathclose|$ hei{\ss}t {\bfseries Ordnung} von $<a>$, $a^{ord(a)}=e$. $\mathopen| U \mathclose|$ teilt immer $\mathopen| G \mathclose|$.\\
 $(R,+,\cdot)$ hei{\ss}t {\bfseries Ring} falls:\\
 1) $(R,+)$ ist kommutative Gruppe. \hspace{2mm} 2) (AG) $\forall a,b,c, \in G$ \hspace{3mm} $a \cdot (b \cdot c) = (a \cdot b) \cdot c$ \\
 3)(DG) $\forall a,b,c, \in G$ \hspace{3mm} $a \cdot (b + c) = a \cdot b + a \cdot c$\\
 R ist kommutativer Ring falls $\forall a,b \in R$\hspace{3mm}$a \cdot b = b \cdot a$\\
-R ist Ring mit {\bfseries Eins(-Element)} falls $\exists 1 \in R$\hspace{3mm} $a\cdot 1 = a$\\
+R ist Ring mit {\bfseries Eins(-Element)} falls $\exists 1 \in R$\hspace{3mm} $a\cdot 1 = a$
 
-
-RSA\\
+\subsection{RSA}
 W{\"a}hle zwei ungleiche Primzahlen $p$ und $q$.\\
 $N=p * q$\\
 $\varphi (N)=(p-1) * (q-1)$\\
 W{\"a}hle eine zu $\varphi (N)$ teilerfremde Zahl $e$, f{\"u}r die gilt $1<e<\varphi (N)$.\\
-Berechne den Entschl{\"a}sselungsexponenten $d$ als Multiplikatives Inverses(erweiterter euklidischer Algorithmus) von $e$ bez{\"u}glich des Moduls $\varphi (N)$. Es soll also die folgende Kongruenz gelten: $$ e * d\equiv 1\ {\bmod \ }\varphi (N)$$
+Berechne den Entschl{\"u}sselungsexponenten $d$ als Multiplikatives Inverses(erweiterter euklidischer Algorithmus) von $e$ bez{\"u}glich des Moduls $\varphi (N)$. Es soll also die folgende Kongruenz gelten: $$ e * d\equiv 1\ {\bmod \ }\varphi (N)$$
 Verschl{\"u}sseln: $c\equiv m^{e}\ {\bmod \ }N$\\
-Entschl{\"u}sseln: $m\equiv c^{d}\ {\bmod \ }N$\\
+Entschl{\"u}sseln: $m\equiv c^{d}\ {\bmod \ }N$\\\\\\
+Primzahlen: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101
     \end{document}

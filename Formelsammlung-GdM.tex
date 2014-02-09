@@ -47,7 +47,7 @@ Normalformen sind m{\"o}glich, da $\land$, $\neg$ und $\lor$, $\neg$ eine vollst
   \centering
   \def\svgwidth{400pt}
   \input{knfdnf.pdf_tex} %lizenz: CC-by-sa 2.0/de Urheber:  	WikiBasti 21:12, 21. Jan. 2011 (CET) und JensKohl
-	\end{figure}\scriptsize  Lizenz: CC-by-sa 2.0{/}de Urheber: WikiBasti\normalsize \\
+	\end{figure}\scriptsize  Lizenz: CC-by-sa 2.0{/}de Urheber: WikiBasti\normalsize
 
 
 \section{Mengen}
@@ -62,7 +62,7 @@ $\mathcal P(\{ a \}) = \bigl\{ \emptyset, \{ a \} \bigr\}$ \\
 $\mathcal P(\{ a, b \}) = \bigl\{ \emptyset, \{ a \}, \{ b \}, \{ a, b \} \bigr\}$ \\
 $\mathcal P(\{ a, b, c \}) = \bigl\{ \emptyset, \{ a \}, \{ b \}, \{ c \}, \{ a, b \}, \{ a, c \}, \{ b, c \}, \{ a, b, c \} \bigr\}$ \\
 $\mathcal P(\mathcal P(\emptyset)) = \bigl\{ \emptyset, \{\emptyset\}\bigr\}$ \\
-$\mathopen|\mathcal P(A)\mathclose| = 2^{\mathopen|A\mathclose|}$ \\
+$\mathopen|\mathcal P(A)\mathclose| = 2^{\mathopen|A\mathclose|}$
 
 \subsection{Operationen auf Mengen}
 \begin{itemize}\itemsep0em\small
@@ -117,7 +117,7 @@ Sei $m>n$ dann gilt: $\sum_{k=m}^{n}a_k = 0$\\
 \subsection{Vollst{\"a}ndige Induktion}
 %https://de.wikipedia.org/wiki/Vollst%C3%A4ndige_Induktion
 Die Gau{\"ss}sche Summenformel lautet: F{\"u}r alle nat{\"u}rliche Zahlen n $\geq$ 1 gilt
-$\sum^n_{k=1} k = 1+2+\cdots+n = \frac{n(n+1)}{2})$\\
+$\sum^n_{k=1} k = 1+2+\cdots+n = \frac{n(n+1)}{2}$\\
 Der Induktionsanfang ergibt sich unmittelbar: $\sum^1_{k=1} k = 1 = \frac{1(1+1)}{2}$ \\
 Der Induktionsschritt wird {\"u}ber folgende Gleichungskette gewonnen, bei der die Induktionsvoraussetzung mit der zweiten Umformung verwendet wird: $\sum^{n+1}_{k=1} k = \sum^n_{k=1} k + (n+1) = \frac{n(n+1)}{2}+(n+1)\\ =\frac{n(n+1)+2(n+1)}{2} = \frac{(n+1)(n+2)}{2}$
 
@@ -138,12 +138,11 @@ Sei Relation R $\subseteq {[}4{]}^2$ und R = $\{(1,2), (2,1), (2,3), (3,4) (4,3)
 {\bfseries Antisymmetrie(AS):} $\forall a,b \in A\colon (a,b) \in R \,\land\, (b,a) \in R \Rightarrow\; a = b$ Gleich wie Asymmetrie, aber Reflexivit{\"a}t ist erlaubt. \\
 {\bfseries Totalit{\"a}t(TO):} $\forall a,b \in A\colon (a,b) \in R \,\lor\, (b,a) \in R$ Zwischen zwei beliebigen Knoten gibt es immer eine Relation in mindestens eine Richtung.\\
 R hei{\ss}t {\bfseries {\"A}quivalenzrelation} wenn (R), (S) und (T) gelten. \\
-R hei{\ss}t {\bfseries Halbordnung} wenn (R), (AS) und (T) gelten. \\
+R hei{\ss}t {\bfseries Halbordnung} wenn (R), (AS) und (T) gelten. Ein Graph beschreibt nur dann eine Halbordnung, wenn er azyklisch ist. \\
 R hei{\ss}t {\bfseries (Totale) Ordnung} wenn sie eine Halbordnung ist und (TO) erf{\"u}llt. \\
 %https://de.wikipedia.org/wiki/%C3%84quivalenzrelation
 Die {\bfseries {\"A}quivalenzklasse} eines Objektes a ist die Klasse der Objekte, die {\"a}quivalent zu a sind. Sei R $\subseteq A^2$. \\$[a]_R = \{x\in A\mid (x,a) \in R\} \subseteq M$\\
-Der {\bfseries Quotient} von R bez{\"u}glich R ist die Menge A/R = $\{{[}a{[}_R\mid a\subseteq A\}$ (Die Anzahl {\"A}quivalenzklassen)\\
-Ein Graph beschreibt nur dann eine Halbordnung, wenn er azyklisch ist.
+Der {\bfseries Quotient} von R bez{\"u}glich R ist die Menge A/R = $\{{[}a{[}_R\mid a\subseteq A\}$ (Die Anzahl {\"A}quivalenzklassen).
 
 \subsection{Funktionen}
 Eine Relation hei{\ss}t {\bfseries Funktion}, wenn sie eindeutig ist, sprich von jedem Knoten genau ein Pfeil weggeht. Eine Funktion f ordnet jedem Element x einer Definitionsmenge D genau ein Element y einer Zielmenge Z zu. $f\colon\, D\to Z,\; x\mapsto y.$\\
@@ -176,12 +175,13 @@ Die Vorgehensweise um die n{\"a}chstgr{\"o}{\ss}te Permutation zu bestimmen ist:
 \section{Graphentheorie}
 Ein ungerichteter Graph G=(V,E) hei{\ss}t {\bfseries Baum}, falls G azyklisch und zusammenh{\"a}ngend ist.\\
 Ein ungerichteter Graph G=(V,E) hei{\ss}t {\bfseries Wald}, falls G azyklisch ist. Die Anzahl der benachbarten Knoten eines Knoten v nennt man {\bfseries grad(v)}. Ist grad(v) = 1 hei{\ss}t der Knoten {\bfseries Blatt}.  \\
+Ein ungerichteter Graph hei{\ss}t {\bfseries k-regul{\"a}r}, falls jeder Knoten genau Grad $k$ besitzt.\\
 Man nennt einen Graph {\bfseries planar}, wenn man ihn ohne {\"U}berschneidungen zeichnen kann. Der {\bfseries Satz von Kuratowski} besagt, dass K5 und K3,3 die einzig nichtplanaren Graphen sind, ein nichtplanarer Graph muss also einer der beiden Graphen als Minor enthalten.\\
-Anzahl Gebiete(mit {\"A}u{\ss}erem Gebiet): $\mathopen| E \mathclose| -  \mathopen| V \mathclose| + 2$\\
+Anzahl {\bfseries Gebiete}(mit {\"A}u{\ss}erem Gebiet): $\mathopen| E \mathclose| -  \mathopen| V \mathclose| + 2$\\
 F{\"u}r einen planaren Graphen l{\"a}sst sich folgende Absch{\"a}tzung machen: $|E|\leq 3|V|-6$, hat er mindestens 3 Knoten dann auch: $|E|\leq 2|V|-4$. Ist diese Absch{\"a}tzung nicht erf{\"u}llt ist $G$ nicht planar, ist sie erf{\"u}llt folgt daraus aber nicht dass $G$ planar ist.\\
-Die Knotenf{\"a}rbung eines Graphen ist, wenn man die Knoten so f{\"a}rbt, dass zwei Knoten die in Relation zueinander stehen nicht dieselbe Farbe haben. Die chromatische Zahl $\chi$ ist die geringste Anzahl an Farben die der Graph ben{\"o}tigt. Bei Kreisen $C_n$ ist $\chi = 2$ wenn n gerade, und $\chi = 3$ wenn n ungerade. Ein Graph hat genau dann $\chi = 2$, wenn er bipartit ist.\\ 
-Ein Matching ist eine Auswahl an Kanten die disjunkt sind, also sich nicht an einem Knoten "ber{\"u}hren". Wenn das Matching an jedem Knoten eine Kante beinhaltet, ist es maximal und hei{\ss}t auch perfektes Matching. Das perfekte Matching von $C_n$ besteht aus $\frac{n}{2}$ Kanten wenn n gerade ist und $\frac{n-1}{2}$ wenn nicht. Bei dem vollst{\"a}ndigem Graphen $K_{n,m}$ ist es $n$, vorausgesetzt $n\leq m$.\\
-Zwei Graphen hei{\ss}en isomorph, wenn sie, bis auf Umbenennung der Knoten, gleich sind.
+Die {\bfseries Knotenf{\"a}rbung} eines Graphen ist, wenn man die Knoten so f{\"a}rbt, dass zwei Knoten die in Relation zueinander stehen nicht dieselbe Farbe haben. Die {\bfseries chromatische Zahl} $\chi$ ist die geringste Anzahl an Farben die der Graph ben{\"o}tigt. Bei Kreisen $C_n$ ist $\chi = 2$ wenn n gerade, und $\chi = 3$ wenn n ungerade. Ein Graph hat genau dann $\chi = 2$, wenn er bipartit ist.\\ 
+Ein {\bfseries Matching} ist eine Auswahl an Kanten die disjunkt sind, also sich nicht an einem Knoten "ber{\"u}hren". Wenn das Matching an jedem Knoten eine Kante beinhaltet, ist es maximal und hei{\ss}t auch {\bfseries perfektes Matching}. Das perfekte Matching von $C_n$ besteht aus $\frac{n}{2}$ Kanten wenn n gerade ist und $\frac{n-1}{2}$ wenn nicht. Bei dem vollst{\"a}ndigem Graphen $K_{n,m}$ beinhaltet das perfekte Matching  $n$ Kanten und es gibt $m^{\underline n}$ verschiedene perfekte Matchings, vorausgesetzt $n\leq m$(bei beiden).\\
+Zwei Graphen hei{\ss}en {\bfseries isomorph}, wenn sie, bis auf Umbenennung der Knoten, gleich sind $n\leq m$.
 
 \section{Kombinatorik}
 \resizebox{11cm}{!} {
@@ -200,7 +200,7 @@ Rechenregeln:\begin{itemize}
     \item $k \cdot \binom nk = n \cdot \binom{n-1}{k-1}$\\
     \item $\binom{n+1}{k+1} = \binom nk + \binom n{k+1}$\\
 \end{itemize}
-Binomialtheorem:\\
+\subsection{Binomialtheorem}
 $(x+y)^3 = x^3 + 3x^2y + 3xy^2 + y^3$, \\ $(x+y)^4 = x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + y^4$ 
 \begin{itemize}
 \item $(x+y)^n = \sum_{k=0}^n {n \choose k}x^{n-k}y^k = \sum_{k=0}^n {n \choose k}x^{k}y^{n-k}$
@@ -208,8 +208,7 @@ $(x+y)^3 = x^3 + 3x^2y + 3xy^2 + y^3$, \\ $(x+y)^4 = x^4 + 4x^3y + 6x^2y^2 + 4xy
 \item $(x+y+z)^n = \sum_{k=0}^n \sum_{l=0}^{n-k} {{n \choose {k,l}} x^k y^l z^{n-k-l}}$ wobei ${n \choose {k,l}} = \frac{n!}{k!l!(n-k-l)!}$
 \end{itemize}
 
-
-K{\"u}rzeste Gitterwege\\
+\subsection{K{\"u}rzeste Gitterwege}
 Es gibt w(s,t) = ${a+b} \choose a$ = ${a+b} \choose b$ k{\"u}rzeste Wege von s nach t in einem a$\times$b-Gitter.\\Ist der Punkt c gesperrt dann gibt es $w(s,t) - {{a+c} \choose a} * {{b+c} \choose c}$ Wege.\\ Wenn Punkt c und d gegeben sind und mindestens einer der beiden besucht werden muss gilt: $w(a,c)*w(c,b) + w(a,d) * w(d,b) - w(a,c) * w(c,d) * w(d,b)$.\\
 Umformuliert: ${{a+c} \choose a} * {{b+c} \choose c} - {{a+d} \choose a} * {{b+d} \choose b} - {{a+c} \choose a} * {{c+d} \choose c} * {{b+d} \choose b}$
 
@@ -227,7 +226,7 @@ Der ggT l{\"a}sst sich als Linearkombination von m und n darstellen, berechnet w
   84 & 60 & 1 & 24 & -2 & $1 - (-2)*1 = 3$ \\ \hline
   60 & 24 & 2 & 12 & 1  & $0-1*2=-2$ \\ \hline
   24 & 12 & 2 & 0  & 0  & 1 \\ \hline
- \end{tabular}
+ \end{tabular}\\
 Hierbei muss auch wieder $m \leq n$ gelten.
 Allgemein betrachtet(Zeile 0 ist die unterste):\\ $q_i = \lfloor \frac{n_i}{m_i} \rfloor$ \hspace{5mm} $r_i = n_i\; mod\; m_i$\\
 $x_0 = 0$ $y_0 = x_1 = 1$ \hspace{5mm} $x_i = y_{i-1}$ \hspace{5mm} $y_i=x_{-1}-q_i*y_{-1}$ \\ Als Probe: $n_i*x_i+m_i*y_I = ggT(m,n)$ gilt in jeder Zeile.
@@ -240,12 +239,12 @@ Die Division gilt nur wenn der Quotient teilerfremd zu m ist: Sei $d \bot m$ und
 ist $a \bot m$, dann hat die Kongruenz $ax \equiv b\; (mod\; m)$ die in $\mathbb{Z}_m$ eindeutige L{\"o}sung $x=a^{-1}b\; mod\;m$. Man erh{\"a}lt $a^{-1}$ indem man den erweiterten euklidischen Algorithmus auf $a$ und $m$ anwendet.\\
 Die Anzahl der teilerfremdem Zahlen $m$ in $\mathbb{Z}_m$ wird als {\bfseries eulersche $\varphi$-Funktion} bezeichnet: $\varphi (m) = \mathopen| \mathbb{Z}^{*}_m \mathclose| $\\ Es gilt: $
     \varphi (m \cdot n) = \varphi (m) \cdot \varphi (n) $\\
-F{\"u}r Primzahlen: $\varphi(p) = p-1$\\
-F{\"u}r Primzahlpotenzen: $\varphi(p^k) = p^k-p^{k-1} = p^{k-1}(p-1)= p^{k}\left(1-\frac1{p}\right)$\\ z.B. $\varphi(16)=\varphi(2^4)=2^4-2^3=2^3\cdot (2-1)=2^4\cdot \left(1-\frac12\right) =8 $\\
-Allgemein: $\varphi(n) = \prod_{p\mid n} p^{k_p-1}(p-1) = n \prod_{p\mid n}\left(1-\frac{1}{p}\right) $\\
+{\bfseries F{\"u}r Primzahlen:} $\varphi(p) = p-1$\\
+{\bfseries F{\"u}r Primzahlpotenzen:} $\varphi(p^k) = p^k-p^{k-1} = p^{k-1}(p-1)= p^{k}\left(1-\frac1{p}\right)$\\ z.B. $\varphi(16)=\varphi(2^4)=2^4-2^3=2^3\cdot (2-1)=2^4\cdot \left(1-\frac12\right) =8 $\\
+{\bfseries Allgemein:} $\varphi(n) = \prod_{p\mid n} p^{k_p-1}(p-1) = n \prod_{p\mid n}\left(1-\frac{1}{p}\right) $\\
 z.B. $\varphi (84) = \varphi (2^2*3*7)=84*(1-\frac{1}{2})*(1-\frac{1}{3})*(1-\frac{1}{7})=24$\\
-Um die Anzahl der Teiler von n zu berechnen, braucht man die Primfaktorzerlegung($\prod {p^k}$). $\mathopen| T_n \mathclose| = \prod{(k+1)}$\\
-{\bfseries Exponentation}: $a^{\varphi (m)} \equiv 1\;(mod\;m)$\\
+Um die {\bfseries Anzahl der Teiler} von n zu berechnen, braucht man die Primfaktorzerlegung($\prod {p^k}$). $\mathopen| T_n \mathclose| = \prod{(k+1)}$\\
+{\bfseries Exponentation}(nur wenn $a \bot m$): $a^{\varphi (m)} \equiv 1\;(mod\;m)$\\
 z.B. $5^{99} (mod\;84)\;$\hspace{3mm}$ \varphi (84) = 24 \longrightarrow 5^{24}*5^{24}*5^{24}*5^3 = 1*1*1*125 \equiv 41\; (mod\; 84)$
 
 \subsection{Lineare Kongruenzen(Chinesischer Restsatz)}
@@ -253,7 +252,8 @@ Ist ein Gleichungssystem der folgenden Art gegeben:\\
 $x \equiv a_1\; mod\; m_1$\\ $x \equiv a_2\; mod\; m_2$\\
 Dann bestimmt man $x_1$ und $x_2$ mithilfe des erweiterten euklidischen Algorithmus jeweils {\"u}ber $m_1$ und $m_2$:\\
 $m_2 * x_1 \equiv 1\; mod\; m_1$ \\ $m_1 * x_2 \equiv 1\; mod\; m_2$\\
-Dann gilt: $x=a_1*m_2*x_1+a_2*m_1*x_2$.
+Dann gilt: $x=a_1*m_2*x_1+a_2*m_1*x_2$.\\
+Das Ergebnis ist nun $(mod\;m_1*m_2)$ zu betrachten. Alle L{\"o}sungen haben also die Form $x + m_1*m_2*t$, wobei $t\in \mathbb{Z}$.
 
 \section{Algebraische Strukturen}
 $(G,\; \circ)$ hei{\ss}t {\bfseries Gruppe} falls folgende Eigenschaften gelten:\\

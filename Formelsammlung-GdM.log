@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.1.19)  9 FEB 2014 16:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.1.19)  10 FEB 2014 09:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -369,17 +369,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--202
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 216--233
+Underfull \hbox (badness 10000) in paragraph at lines 214--231
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 279--283
+Underfull \hbox (badness 10000) in paragraph at lines 277--281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--283
+Underfull \hbox (badness 10000) in paragraph at lines 277--281
 
  []
 
@@ -391,7 +391,7 @@ Here is how much of TeX's memory you used:
  6434 multiletter control sequences out of 15000+600000
  12112 words of font info for 47 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,10n,32p,592b,294s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,10n,32p,698b,294s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2013/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmbx10.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10
@@ -404,7 +404,7 @@ c/amsfonts/cm/cmr8.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr9.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Formelsammlung-GdM.pdf (7 pages, 226884 bytes).
+Output written on Formelsammlung-GdM.pdf (7 pages, 227203 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream

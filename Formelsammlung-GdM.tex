@@ -209,7 +209,7 @@ $(x+y)^3 = x^3 + 3x^2y + 3xy^2 + y^3$, \\ $(x+y)^4 = x^4 + 4x^3y + 6x^2y^2 + 4xy
 \end{itemize}
 
 \subsection{K{\"u}rzeste Gitterwege}
-Vom Ursprung$(0,0)$ bis b$(b_1,b_2)$: $w((0,0),b) = {{b_1+b_2} \choose {b_1}}$ = ${{b_1+b_2} \choose {b_2}}$.\\ Von Punkt $a(a_1,a_2)$ nach $b(b_1,b_2)$: $w(a,b) = {{b_1-a_1\;+\;b_2-a_2} \choose {b_1-a_1}} = {{b_1-a_1\;+\;b_2-a_2} \choose {b_2-a_2}}$ (wobei $b_i \geq a_i$ gelten muss).\\Muss man {\"u}ber Punkt $c(c_1,c_2)$ gehen gibt es $w((0,0),c) * w(c,b)$ Wege, ist $c$ gesperrt, zieht man die Wege, die {\"u}ber c gehen von den gesamten Wegen ab.\\ Wenn Punkt c und d gegeben sind und mindestens einer der beiden besucht werden muss, rechnet man die Wege {\"u}ber c aus addiert die Wege {\"u}ber d und zieht davon die Wege die {\"u}ber beide gehen wieder ab.
+Vom Ursprung$(0,0)$ bis b$(b_1,b_2)$: $w((0,0),b) = {{b_1+b_2} \choose {b_1}}$ = ${{b_1+b_2} \choose {b_2}}$.\\ Von Punkt $a(a_1,a_2)$ nach $b(b_1,b_2)$: $w(a,b) = {{b_1-a_1\;+\;b_2-a_2} \choose {b_1-a_1}} = {{b_1-a_1\;+\;b_2-a_2} \choose {b_2-a_2}}$.\\Muss man {\"u}ber Punkt $c(c_1,c_2)$ gehen gibt es $w((0,0),c) * w(c,b)$ Wege, ist $c$ gesperrt, zieht man die Wege, die {\"u}ber c gehen von den gesamten Wegen ab.\\ Wenn Punkt c und d gegeben sind und mindestens einer der beiden besucht werden muss, rechnet man die Wege {\"u}ber c aus addiert die Wege {\"u}ber d und zieht davon die Wege die {\"u}ber beide gehen wieder ab.
 \section{Zahlentheorie}
 F{\"u}r m,n $\in \mathbb{Z}$ und $m > 0$, ist m {\bfseries Teiler von} n, falls $\exists t\in \mathbb{Z} \; n=t*m$. Kurz: $m\backslash n$.\\
 Die Menge aller Teiler ist $T_n = \{\: m \; |\;  m\backslash n \: \}$. $T_{m,n} = T_m \cap T_n$.\\

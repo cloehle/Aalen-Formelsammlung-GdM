@@ -7,7 +7,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \begin{document}
-Formelsammlung - Grundlagen der Mathematik - Stand: 10.02.2014 - Christian L{\"o}hle\\
+Formelsammlung - Grundlagen der Mathematik - Stand: 13.10.2014 - Christian L{\"o}hle - github.com/cloehle/\\
 \footnotesize Dieses Werk ist unter der Creative-Commons-Lizenz vom Typ Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International lizenziert. Um eine Kopie dieser Lizenz einzusehen, besuchen Sie http://creativecommons.org/licenses/by-sa/4.0/ oder schreiben Sie einen Brief an Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.\normalsize
 
 \section{Logik}
@@ -24,9 +24,9 @@ $1$ & $1$ & $0$ & $1$ & $1$ & $0$ & $1$ & $1$ \\ \hline
 \end{tabular}\\ \\
 Eine Formel F hei{\ss}t:
 \begin{itemize}\itemsep0em\small
-\item {\bfseries erf{\"u}llbar}, wenn F bei mindestens einer Variabelbelegung 1 ist.\\
-\item {\bfseries unerf{\"u}llbar}, wenn F bei jeder Variabelbelegung 0 ist.\\
-\item {\bfseries Tautologie($\top$)/g{\"u}ltig}, wenn F bei jeder Variabelbelegung 1 ist.
+\item {\bfseries erf{\"u}llbar}, wenn F bei mindestens einer Variablenbelegung 1 ist.\\
+\item {\bfseries unerf{\"u}llbar}, wenn F bei jeder Variablenbelegung 0 ist.\\
+\item {\bfseries Tautologie($\top$)/g{\"u}ltig}, wenn F bei jeder Variablenbelegung 1 ist.
 \end{itemize}\normalsize
 
 \subsection{Rechengesetze}
@@ -39,8 +39,8 @@ Sonstiges: \\ $x \oplus 0 = x$\\ $x \oplus 1 = \neg x$ \\ $ x \oplus y = (x \lor
 %https://de.wikipedia.org/wiki/Disjunktive_Normalform
 %https://de.wikipedia.org/wiki/Konjunktive_Normalform
 \subsection{Normalformen}
-{\bfseries Disjunktive Normalform(DNF)} besteht aus einer Disjunktion($\lor$) von Konjunktionstermen($\land$). Nehme die Variabelbelegung(z.B. $A \land \neg B \land \neg C$) wo F=1 ist und verkn{\"u}pfe sie mit $\lor$. \\
-{\bfseries Konjunktive Normalform(KNF}) besteht aus einer Konjunktion($\land$) von Disjunktionstermen($\lor$). Nehme die Variabelbelegung(z.B. $A \land \neg B \land \neg C$) wo F=0 ist, {\bfseries negiere} sie($\neg A \land B \land C$) und verkn{\"u}pfe sie mit $\lor$. \\
+{\bfseries Disjunktive Normalform(DNF)} besteht aus einer Disjunktion($\lor$) von Konjunktionstermen($\land$). Nehme die Variablenbelegung(z.B. $A \land \neg B \land \neg C$) wo F=1 ist und verkn{\"u}pfe sie mit $\lor$. \\
+{\bfseries Konjunktive Normalform(KNF}) besteht aus einer Konjunktion($\land$) von Disjunktionstermen($\lor$). Nehme die Variablenbelegung(z.B. $A \land \neg B \land \neg C$) wo F=0 ist, {\bfseries negiere} sie($\neg A \land B \land C$) und verkn{\"u}pfe sie mit $\lor$. \\
 Normalformen sind m{\"o}glich, da $\land$, $\neg$ und $\lor$, $\neg$ eine vollst{\"a}ndige Basis f{\"u}r die Aussagenlogik bilden. Um zu zeigen, dass andere Operatoren ebenfalls eine vollst{\"a}ndige Basis bilden, muss man $\land$, $\neg$ oder $\lor$, $\neg$ als Formel bilden. \\
 %https://de.wikipedia.org/w/index.php?title=Datei:Knf%2Bdnf.svg&filetimestamp=20110122170208&
 \begin{figure}[H]
@@ -116,7 +116,7 @@ Sei $m>n$ dann gilt: $\sum_{k=m}^{n}a_k = 0$\\
 
 \subsection{Vollst{\"a}ndige Induktion}
 %https://de.wikipedia.org/wiki/Vollst%C3%A4ndige_Induktion
-Die Gau{\"ss}sche Summenformel lautet: F{\"u}r alle nat{\"u}rliche Zahlen n $\geq$ 1 gilt
+Die Gau{\ss}sche Summenformel lautet: F{\"u}r alle nat{\"u}rliche Zahlen n $\geq$ 1 gilt
 $\sum^n_{k=1} k = 1+2+\cdots+n = \frac{n(n+1)}{2}$\\
 Der Induktionsanfang ergibt sich unmittelbar: $\sum^1_{k=1} k = 1 = \frac{1(1+1)}{2}$ \\
 Der Induktionsschritt wird {\"u}ber folgende Gleichungskette gewonnen, bei der die Induktionsvoraussetzung mit der zweiten Umformung verwendet wird: $\sum^{n+1}_{k=1} k = \sum^n_{k=1} k + (n+1) = \frac{n(n+1)}{2}+(n+1)\\ =\frac{n(n+1)+2(n+1)}{2} = \frac{(n+1)(n+2)}{2}$
